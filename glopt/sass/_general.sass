@@ -1,0 +1,580 @@
+.menu
+    &_line
+        display: block
+        height: 52px
+        position: fixed
+        background-color: #ec644b
+        width: 100%
+        z-index: 5
+        top: 0
+.hamburger
+    position: absolute
+    right: 10px
+    top: 50%
+    transform: translateY(-50%)
+    width: 26px
+    height: 12px
+    span
+        display: block
+        height: 2px
+        width: 100%
+        background-color: #fff
+        margin-bottom: 2px
+        transition: 0.5s all
+    &_active
+        span
+            margin-bottom: -2px
+            &:nth-child(1)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+                
+.btn
+    width: 160px
+    height: 45px
+    background-color: #ec644b
+    border-radius: 24px
+    box-shadow: none
+    border: none
+    color: #ffffff
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+.btn:hover
+    background-color: #dc5238
+    
+.main
+    min-height: 680px
+    background: url(../img/bg/main.jpg) center (center/cover) no-repeat
+    padding-top: 23px
+    padding-bottom: 82px
+    &_suptitle
+        text-align: center
+        color: #ffffff
+        font-size: 24px
+        font-weight: 300
+        line-height: 24px
+        margin-bottom: 26px
+    &_title
+        text-align: center
+        color: #ec644b
+        font-size: 72px
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 72px
+        margin-bottom: 9px
+    &_subtitle
+        text-align: center
+        color: #ffffff
+        font-size: 42px
+        font-weight: 400
+        text-transform: uppercase
+        line-height: 42px
+        margin-bottom: 0
+    &_lines
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 810px
+        margin: 0 auto
+        margin-top: 38px
+        &_left
+            margin: 0 auto
+            height: 2px
+            background-color: #fff
+            width: 390px
+        &_circle
+            margin: 0 auto
+            height: 10px
+            width: 10px
+            border-radius: 50%
+            background-color: #fff
+            margin: 0 10px
+        &_right
+            margin: 0 auto
+            height: 2px
+            background-color: #fff
+            width: 390px
+    &_cards
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 27px
+        &_icon1, &_icon2, &_icon3, &_icon4
+            img
+                display: block
+                margin: 0 auto
+        &_title1, &_title2, &_title3, &_title4
+            margin-top: 13px;
+            text-align: center
+            color: #ffffff
+            font-size: 16px
+            font-weight: 300
+            font-style: normal
+            line-height: 22px
+    &_button
+        display: block
+        margin: 0 auto
+        width: 230px
+        height: 57px
+        margin-top: 39px
+        font-size: 15px
+        font-weight: 700
+        border-radius: 48px
+.nav
+    display: flex
+    list-style: none
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 9px
+    &_ul
+        display: flex
+        flex-direction: row
+        list-style: none
+        justify-content: space-around
+        margin-top: 17px
+        height: 20px
+        li
+            padding: 0 13px
+            border-right: 1px dotted #585d69
+            line-height: 14px
+        a
+            text-decoration: none
+            color: #ffffff
+            font-size: 15px
+            font-weight: 400
+        a:hover
+            cursor: pointer
+            color: #da604b
+            padding-bottom: 8px
+            border-bottom: 1px solid #da604b
+    &_tel
+        p
+            color: #ffffff
+            font-size: 14px
+            font-weight: 300
+            text-align: right
+            margin-bottom: 5px
+        &_number
+            color: #ffffff
+            font-size: 19px
+            font-weight: 700
+        &_number:hover
+            color: #da604b
+            text-decoration: none
+    &_btn
+        .btn
+            width: 160px
+            height: 45px
+            font-size: 12px
+li.last
+    border-right: none
+.advantage
+    min-height: 590px
+    background-color: #f3f3f3
+    &_cards
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &_card
+        width: 526px
+        display: flex
+        align-items: center
+        margin-bottom: 36px
+        &_img
+            padding-right: 17px
+        &_text
+            width: 447px
+            &_title
+                color: #ec644b
+                font-size: 16px
+                font-weight: 700
+            &_text
+                color: #3a3a3a
+                font-size: 14px
+                font-weight: 300
+                line-height: 22px
+    &_title
+        text-align: center
+        margin-top: 57px
+        color: #2e2e2e
+        font-size: 26px
+        font-weight: 700
+        line-height: 23px
+        text-transform: uppercase
+        margin-bottom: 30px
+.work, .price, .reviews
+    display: block
+    min-height: 619px
+    padding-top: 51px
+    margin-bottom: 50px
+    &_title
+        color: #2e2e2e
+        font-size: 26px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 20px
+        text-align: center
+    &_line
+        margin: 0 auto
+        margin-top: 20px
+        margin-bottom: 17px
+        max-width: 148px
+        height: 1px
+        background-color: #ec644b
+    &_subtitle
+        width: 879px
+        color: #2e2e2e
+        font-size: 21px
+        font-weight: 300
+        line-height: 24px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 37px
+    &_cards
+        display: flex
+        justify-content: space-between
+    &_card
+        margin-right: 30px
+        &_last
+            margin-right: 0px
+        &_img
+            margin-bottom: 28px
+        &_title
+            color: #ec644b
+            font-size: 18px
+            font-weight: 700
+            line-height: normal
+            text-align: center
+            margin-bottom: 16px
+        &_subtitle
+            max-width: 359px
+            // height: 130px
+            color: #3a3a3a
+            font-size: 14px
+            font-weight: 300
+            line-height: 22px
+            text-align: justify
+            // padding-bottom: 40px
+.agent, .managers
+    display: block
+    background: url(../img/bg/agent.jpg) center (center/cover) no-repeat
+    padding-top: 58px
+    padding-bottom: 75px
+    &_circle
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 19px
+        padding-bottom: 28px
+        width: 100px
+        height: 100px
+        border: 1px solid #fff
+        border-radius: 50%
+        margin: 0 auto;
+        margin-bottom: 20px
+    &_title
+        color: #ffffff
+        font-size: 26px
+        font-weight: 700
+        line-height: 23px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 20px
+    &_subtitle
+        color: #ffffff
+        font-size: 19px
+        font-weight: 300
+        line-height: 27px
+        text-align: center
+        width: 984px
+        margin: 0 auto
+.price
+    min-height: 553px
+    &_card
+        height: 357px
+        border: 1px solid #e9e9e9
+        padding: 2px
+        &_title
+            padding-top: 21px
+            height: 61px
+            background-color: #25333c
+            color: #ffffff
+            font-size: 16px
+            font-weight: 700
+            text-transform: uppercase
+        &_img
+            display: block
+            margin: 0 auto
+            margin-top: 14px
+        &_supprice
+            margin-top: 12px
+            text-align: center
+            color: #2e2e2e
+            font-size: 14px
+            font-weight: 400
+            line-height: normal
+            text-transform: uppercase
+        &_price
+            color: #ec644b
+            font-size: 28px
+            line-height: 30px
+            text-align: center
+            margin-top: 5px
+            margin-bottom: 19px
+        &_subprice
+            color: #2e2e2e
+            font-size: 14px
+            font-weight: 300
+            line-height: 20px
+            text-align: center
+            margin-bottom: 25px
+            padding: 0 13px
+        &_button
+            display: block
+            margin: 0 auto
+            margin-bottom: 25px
+.consultation
+    min-height: 344px
+    padding-bottom: 58px
+    &_title
+        color: #3a3a3a
+        font-size: 28px
+        font-weight: 400
+        text-align: center
+        margin-bottom: 71px
+    &_form
+        min-height: 166px
+        border: 1px solid #e5e5e5
+        display: flex
+        justify-content: center
+        align-items: center
+        &_input
+            border: 1px solid #c9c9c9
+            border-radius: 25px
+            width: 270px
+            height: 45px
+            padding: 0 28px
+            font-size: 14px
+            font-weight: 300
+    &_circle
+        display: flex
+        justify-content: center
+        background-color: #fff
+        align-items: center
+        padding-top: 19px
+        padding-bottom: 28px
+        width: 100px
+        height: 100px
+        border: 1px solid #ec644b
+        border-radius: 50%
+        z-index: 1
+        position: absolute
+        top: 23%
+        left: 50%
+        transform: translateX(-50%)
+    &_button
+        position: absolute
+        top: 92%
+        left: 50%
+        transform: translateX(-50%)
+.managers
+    background: url(../img/bg/manager.jpg) center (center/cover) no-repeat
+.scheme
+    min-height: 454px
+    background-color: #f3f3f3
+    padding-top: 51px
+    padding-bottom: 46px
+    &_title
+        color: #2e2e2e
+        font-size: 26px
+        font-weight: 700
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 29px
+    &_card
+        width: 256px
+        margin-bottom: 26px
+        padding: 0 5px;
+        &_img
+            display: block
+            margin: 0 auto
+            margin-bottom: 12px
+        &_title
+            color: #ec644b
+            font-size: 16px
+            font-weight: 700
+            line-height: normal
+            text-align: center
+            margin-bottom: 5px
+        &_subtitle
+            color: #3a3a3a
+            font-size: 14px
+            font-weight: 300
+            line-height: 20px
+            text-align: center
+.reviews
+    min-height: 400px
+    padding-bottom: 50px
+    margin-bottom: 0
+    &_subtitle
+        margin-bottom: 31px
+.carousel
+    &_inner
+        position: relative
+        display: block
+        max-width: 601px
+        min-height: 241px
+        margin: 0 auto
+        img
+            margin: 0 auto
+            // margin-bottom: 19px
+        .name
+            margin-top: 19px
+            font-size: 18px
+            font-weight: 700
+            line-height: normal
+            text-align: center
+            margin-bottom: 10px
+        .review
+            padding-left: 10px
+            padding-right: 10px
+            font-weight: 300
+            line-height: normal
+            max-width: 601px
+            text-align: center
+    .slick-prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: -39px
+        border: none
+        background-color: #fff
+        img
+            width: 14px
+            height: 47px
+    .slick-next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: auto
+        right: -39px
+        border: none
+        background-color: #fff
+        img
+            width: 14px
+            height: 47px
+.questions
+    min-height: 438px
+    background: url(../img/bg/questions.jpg) center (center/cover) no-repeat
+    padding-top: 62px
+    padding-bottom: 79px
+    &_form
+        height: 297px
+        width: 896px
+        margin: 0 auto
+        &_input
+            border: 1px solid #c9c9c9
+            border-radius: 25px
+            width: 268px
+            height: 45px
+            padding: 0 28px
+            font-size: 14px
+            font-weight: 300
+            // margin-bottom: 18px
+        &_message
+            border: 1px solid #c9c9c9
+            border-radius: 10px
+            width: 813px
+            height: 71px
+            font-size: 14px
+            font-weight: 300
+            padding-left: 28px
+    &_head
+        height: 68px
+        background-color: #25333c
+        &_title
+            padding-top: 10px
+            color: #ffffff
+            font-size: 19px
+            font-weight: 700
+            text-transform: uppercase
+            text-align: center
+        &_subtitle
+            color: #ffffff
+            font-size: 14px
+            font-weight: 400
+            text-transform: uppercase
+            text-align: center
+    &_body
+        min-height: 229px
+        background-color: rgba(255, 255, 255, .7)
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        align-items: center
+        padding-top: 18px
+        padding-bottom: 25px
+    &_btn
+        width: 180px
+footer
+    min-height: 201px
+    background-color: #25333c
+    padding-top: 24px
+    padding-bottom: 28px
+    a
+        img
+            width: 70px
+.footer
+    &_text
+        color: #ffffff
+        font-size: 16px
+        font-weight: 700
+    &_tel
+        &_question
+            color: #ffffff
+            font-size: 14px
+            font-weight: 300
+        &_phone
+            a
+                color: #ffffff
+                font-size: 19px
+                font-weight: 700
+    &_line
+        margin: 0 auto
+        margin-top: 22px
+        margin-bottom: 19px
+        width: 1171px
+        height: 1px
+        background-color: #667076
+    &_info
+        &_trademark
+            opacity: 0.6
+            color: #ffffff
+            font-size: 13px
+            font-weight: 300
+        &_conf
+            a
+                color: #ec644b
+                font-size: 13px
+                font-weight: 300
+        &_creators
+            opacity: 0.6
+            color: #ffffff
+            font-size: 13px
+            font-weight: 300
+            padding-right: 10px
+            a
+                .footer
+                    &_logo
+                        width: auto
+
+
+    
+
+
+    
+
+
