@@ -38,6 +38,9 @@ class Ball{
   
     hit(strength=0.6) {
       this.rigidBody.wakeUp();
+      
+      const position = new CANNON.Vec3();
+      position.copy(this.rigidBody.position);
     
       const theta = this.game.controls.getAzimuthalAngle();
       this.tmpQuat.setFromAxisAngle(this.up, theta);
@@ -69,33 +72,11 @@ class Ball{
     }
 
     createMesh (scene) {
-        const geometry = new THREE.SphereBufferGeometry(Ball.RADIUS, 16, 16);
-        const material = new THREE.MeshStandardMaterial({
-            metalness: 0.0,
-            roughness: 0.1,
-            envMap: scene.environment
-        });
-  
-        if (this.id>0){
-            const textureLoader = new THREE.TextureLoader().setPath('../../assets/pool-table/').load(`${this.id}ball.png`, tex => {
-                material.map = tex;
-                material.needsUpdate = true;
-            });
-        }
-  
-        const mesh = new THREE.Mesh(geometry, material);
-    
-        mesh.castShadow = true;
-        mesh.receiveShadow = true;
-
-        scene.add(mesh);
-    
-        return mesh;
+        
     };
  
     update(){
-        this.mesh.position.copy(this.rigidBody.position);
-        this.mesh.quaternion.copy(this.rigidBody.quaternion);
+        
     }
   }
 

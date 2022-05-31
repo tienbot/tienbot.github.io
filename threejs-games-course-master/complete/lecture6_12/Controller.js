@@ -189,8 +189,7 @@ class Controller{
     }
 
     fire(mode){
-        //console.log(`Fire:${mode}`);
-        this.user.firing = mode;
+        console.log(`Fire:${mode}`);
     }
 
     onMove( up, right ){

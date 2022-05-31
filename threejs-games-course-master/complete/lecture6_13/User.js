@@ -225,7 +225,6 @@ class User{
 				this.game.active = false;
 				setTimeout( () => this.game.active = true, 1000);
 			}
-			this.game.tintScreen(name);
 			this.game.ui.health = Math.max(0, Math.min(this.health/100, 1)); 
 			if (this.sfx) this.sfx.play('eve-groan');
 		}

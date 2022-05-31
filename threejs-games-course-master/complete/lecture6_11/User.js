@@ -115,7 +115,6 @@ class User{
                 this.object.traverse( child => {
                     if ( child.isMesh){
                         child.castShadow = true;
-						if (child.name.includes('Rifle')) this.rifle = child;
                     }
                 });
 

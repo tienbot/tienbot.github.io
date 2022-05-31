@@ -16,20 +16,6 @@ class Game{
         this.initWorld();
         this.initScene();
 
-        this.strengthBar = new StrengthBar();
-
-        const strengthControl = document.getElementById('strengthControl');
-
-        if ('ontouchstart' in document.documentElement){
-            strengthControl.addEventListener( 'touchstart', this.mousedown.bind(this));
-            strengthControl.addEventListener( 'touchend', this.mouseup.bind(this));
-        }else{
-            strengthControl.addEventListener( 'mousedown', this.mousedown.bind(this));
-            strengthControl.addEventListener( 'mouseup', this.mouseup.bind(this));
-            document.addEventListener( 'keydown', this.keydown.bind(this));
-            document.addEventListener( 'keyup', this.keyup.bind(this));
-        }
-
         if (this.helper) this.helper.wireframe = true;
     }
 
@@ -80,15 +66,6 @@ class Game{
             this.strengthBar.visible = false;
             this.strikeCueball()
         }
-    }
-
-    mousedown(evt){
-        this.strengthBar.visible = true;
-    }
-
-    mouseup( evt ){
-        this.strengthBar.visible = false;
-        this.strikeCueball()
     }
 
     strikeCueball(){
@@ -234,7 +211,7 @@ class Game{
     }
 
     createBalls(){
-        this.balls = [ new WhiteBall(this, -Table.LENGTH/4, 0) ];
+        this.balls = [ new Ball(this, -Table.LENGTH/4, 0) ];
 
         const rowInc = 1.74 * Ball.RADIUS;
         let row = { x:Table.LENGTH/4+rowInc, count:6, total:6 };
@@ -275,7 +252,7 @@ class Game{
         this.controls.target.copy(this.cueball.mesh.position);
         this.controls.update();
         if (this.helper) this.helper.update();
-        if (this.strengthBar.visible) this.strengthBar.update();
+        if (this.strengthBar) this.strengthBar.update();
         const dt = this.clock.getDelta();
         this.world.step(this.world.fixedTimeStep);
         this.balls.forEach( ball => ball.update(dt) );

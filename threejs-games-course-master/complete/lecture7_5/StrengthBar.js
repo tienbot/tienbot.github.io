@@ -40,7 +40,7 @@ class StrengthBar{
 	}
 
 	get strength(){
-		return this._strength;
+		return this._strength * 0.4;
 	}
 
 	set strength(strength){

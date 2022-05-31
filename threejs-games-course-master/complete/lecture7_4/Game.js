@@ -10,7 +10,7 @@ import { Table } from './Table.js';
 
 class Game{
 	constructor(){
-        this.debug = false;
+        this.debug = true;
         this.initThree();
         this.initWorld();
         this.initScene();
@@ -59,8 +59,8 @@ class Game{
         spotlight.shadow.camera.fov = 70;
         spotlight.shadow.camera.near = 1;
         spotlight.shadow.camera.far = 2.5;
-        spotlight.shadow.mapSize.width = 2048;
-        spotlight.shadow.mapSize.height = 2048;
+        spotlight.shadow.mapSize.width = 1024;
+        spotlight.shadow.mapSize.height = 1024;
           
         this.scene.add(spotlight);
 
@@ -148,7 +148,6 @@ class Game{
 			'pool-table.glb',
 			// called when the resource is loaded
 			gltf => {
-                
                 this.table = gltf.scene;
                 this.table.position.set( -Table.LENGTH/2, 0, Table.WIDTH/2)
                 this.table.traverse( child => {
@@ -188,7 +187,7 @@ class Game{
 			}  
         );
     }
-
+    
     createBalls(){
         const X_offset = Table.LENGTH / 4;
         const X_offset_2 = 1.72;
