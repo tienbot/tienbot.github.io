@@ -1,5 +1,5 @@
 function init(){
-    var age = 41; //устанавливаем возраст
+    var age = 10; //устанавливаем возраст
     document.getElementById("age").innerHTML = age;
     var clicks = 0;
     var question = [
@@ -649,8 +649,7 @@ function init(){
         "Есть ли проблемы со здоровьем?",
         "Как познакомились твои родители?",
         "У тебя есть дети? Расскажи о них",
-        "Расскажи о своих родителях",
-        ""
+        "Расскажи о своих родителях"
     ];
 
     var text = function makeQuestion() {
