@@ -1,5 +1,5 @@
 function init(){
-    var age = 25; //устанавливаем возраст
+    var age = 15; //устанавливаем возраст
     document.getElementById("age").innerHTML = age;
     var clicks = 0;
     var question = [
