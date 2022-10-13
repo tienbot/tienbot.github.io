@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'GothamPro';
-    src: url('./font-awesome/fonts/GothamPro.svg');
+    src: url('/font-awesome/fonts/GothamPro.svg');
     src: url('../font-awesome/fonts/GothamPro.woff');
     src: url('../font-awesome/fonts/GothamPro.ttf');
     font-weight: normal;
