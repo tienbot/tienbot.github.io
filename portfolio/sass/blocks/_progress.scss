@@ -1,0 +1,38 @@
+.progress{
+    padding-top: 120px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        grid-auto-columns: 350px;
+        justify-content: center;
+        gap: 30px 45px;
+    }
+    &__title{
+        padding-left: 14px;
+        position: relative;
+        @include before_circle;
+        &:before{
+            top: -8px;
+        }
+    }
+    &__card{
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__bar{
+        margin-top: 27px;
+        max-width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        &-line{
+            height: 14px;
+            background: $main-color;
+            border-radius: 4px;
+        }
+    }
+}
