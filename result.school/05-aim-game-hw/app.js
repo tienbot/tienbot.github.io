@@ -83,5 +83,16 @@ function getRandomColor(){
     return colors[Math.floor(Math.random() * colors.length)] 
 }
 
+function winTheGame(){
+    function kill(){
+        const circle5 = document.querySelector('.circle5')
+
+        if(circle5){
+            circle5.click()
+        }
+    }
+    setInterval(kill, 42)
+}
+
 //добавить кнопку с другим временем
 //менять цвет у кружка
