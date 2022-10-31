@@ -224,3 +224,14 @@ function Game(){
     }
 }
 Game()
+
+function winTheGame(){
+    function kill(){
+        const circle5 = document.querySelector('.circle5')
+
+        if(circle5){
+            circle5.click()
+        }
+    }
+    setInterval(kill, 42)
+}
