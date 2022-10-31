@@ -1,4 +1,4 @@
-//ПРОЕКТ 1
+//ПРОЕКТ 1 КАРТОЧКИ
 function slidesPlugin(activeSlide = 0){
     const slides = document.querySelectorAll('.slide')
 
@@ -19,7 +19,7 @@ function slidesPlugin(activeSlide = 0){
 }
 slidesPlugin(4)
 
-//ПРОЕКТ 2
+//ПРОЕКТ 2 DRAG
 function DragNDrop(){
     const item = document.querySelector('.item');
     const placeholders = document.querySelectorAll('.placeholder');
@@ -47,7 +47,6 @@ function DragNDrop(){
         event.preventDefault()
     }
     function dragenter(event){
-        console.log('dragenter')
         event.target.classList.add('hovered')
     }
     function dragleave(event){
@@ -60,7 +59,7 @@ function DragNDrop(){
 }
 DragNDrop()
 
-//ПРОЕКТ 3
+//ПРОЕКТ 3 СЛАЙДЕР
 function Slider(){
     const upBtn = document.querySelector('.up-button')
     const downBtn = document.querySelector('.down-button')
@@ -70,8 +69,6 @@ function Slider(){
     const slidesCount = mainSlide.querySelectorAll('div').length
 
     let activeSlideIndex = 0
-
-    sidebar.style.top = `-${(slidesCount - 1) * 100}vh`
 
     upBtn.addEventListener('click', () =>{
         changeSlide('up')
@@ -100,22 +97,49 @@ function Slider(){
             if(activeSlideIndex < 0){
                 activeSlideIndex = slidesCount - 1
             }
+        } else if(direction === 'right'){
+            activeSlideIndex++
+            if(activeSlideIndex === slidesCount){
+                activeSlideIndex = 0
+            }
+        } else if(direction === 'left'){
+            activeSlideIndex--
+            if(activeSlideIndex < 0){
+                activeSlideIndex = slidesCount - 1
+            }
         }
 
+        const width = container.clientWidth
         const height = container.clientHeight
 
-        mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
+        if(window.screen.width > 576){
+            sidebar.style.top = `-${(slidesCount - 1) * 100}vh`
 
-        sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`
+            mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
+
+            sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`
+        } else if( window.screen.width < 577){
+            sidebar.style.top = 0
+            sidebar.style.left = `-${(slidesCount - 1) * 100}vw`
+
+            mainSlide.style.transform = `translateX(-${activeSlideIndex * width}px)`
+
+            sidebar.style.transform = `translateX(${activeSlideIndex * width}px)`
+        }
     }
 }
 Slider()
 
-//ПРОЕКТ 4
+//ПРОЕКТ 4 КВАДРАТЫ
 function Board(){
     const board = document.querySelector('#board')
     const colors = ['#4a0868', '#9e15d6', '#bf7405', '#fb0965', '#36a086', '#56a63e', '#1e44e5', '#026ddc']
-    const SQUARES_NUMBER = 2244
+    let SQUARES_NUMBER = null
+    if(window.screen.width > 1000){
+        SQUARES_NUMBER = 2244
+    } else if( window.screen.width < 999){
+        SQUARES_NUMBER = window.screen.width + 14
+    }
 
     for(let i = 0; i<SQUARES_NUMBER; i++){
         const square = document.createElement('div')
@@ -146,32 +170,32 @@ function Board(){
 }
 Board()
 
-//ПРОЕКТ 5
+//ПРОЕКТ 5 ИГРА
 function Game(){
-    const startBtn5 = document.querySelector('#start5')
-    const screens5 = document.querySelectorAll('.screen5')
-    const timeList5 = document.querySelector('#time-list5')
-    const timeEl5 = document.querySelector('#time5')
-    const board5 = document.querySelector('#board5')
-    let time5 = 0
-    let score5 = 0
+    const startBtn = document.querySelector('#game5 #start')
+    const screens = document.querySelectorAll('.screen')
+    const timeList = document.querySelector('#time-list')
+    const timeEl = document.querySelector('#time')
+    const board = document.querySelector('#board-game')
+    let time = 0
+    let score = 0
 
-    startBtn5.addEventListener('click', (event) => {
+    startBtn.addEventListener('click', (event) => {
         event.preventDefault()
-        screens5[0].classList.add('up5')
+        screens[0].classList.add('up')
     })
 
-    timeList5.addEventListener('click', event => {
-        if(event.target.classList.contains('time-btn5')){
-            time5 = parseInt(event.target.getAttribute('data-time'))
-            screens5[1].classList.add('up5')
+    timeList.addEventListener('click', event => {
+        if(event.target.classList.contains('time-btn')){
+            time = parseInt(event.target.getAttribute('data-time'))
+            screens[1].classList.add('up')
             startGame()
         }
     })
 
-    board5.addEventListener('click', event => {
-        if(event.target.classList.contains('circle5')){
-            score5++
+    board.addEventListener('click', event => {
+        if(event.target.classList.contains('circle')){
+            score++
             event.target.remove()
             createRandomCircle()
         }
@@ -180,14 +204,14 @@ function Game(){
     function startGame() {
         setInterval(decreaseTime, 1000)
         createRandomCircle()
-        setTime(time5)
+        setTime(time)
     }
 
     function decreaseTime() {
-        if(time5 === 0){
+        if(time === 0){
             finishGame()
         } else {
-            let current = --time5
+            let current = --time
             if (current < 10) {
                 current = `0${current}`
             }
@@ -196,27 +220,27 @@ function Game(){
     }
 
     function setTime(value){
-        timeEl5.innerHTML = `00:${value}`
+        timeEl.innerHTML = `00:${value}`
     }
 
     function finishGame(){
-        timeEl5.parentNode.classList.add('hide5')
-        board5.innerHTML = `<h1>Счет: <span class='primary5'>${score5}</span><h1/>`
+        timeEl.parentNode.classList.add('hide')
+        board.innerHTML = `<h3>Счет: <span class='primary'>${score}</span><h3/>`
     }
 
     function createRandomCircle(){
-        const circle5 = document.createElement('div')
+        const circle = document.createElement('div')
         const size = getRandomNumber(10, 60)
-        const {width, height} = board5.getBoundingClientRect()
+        const {width, height} = board.getBoundingClientRect()
         const x = getRandomNumber(0, width - size)
         const y = getRandomNumber(0, height - size)
 
-        circle5.classList.add('circle5')
-        circle5.style.width = `${size}px`
-        circle5.style.height = `${size}px`
-        circle5.style.top = `${y}px`
-        circle5.style.left = `${x}px`
-        board5.append(circle5)
+        circle.classList.add('circle')
+        circle.style.width = `${size}px`
+        circle.style.height = `${size}px`
+        circle.style.top = `${y}px`
+        circle.style.left = `${x}px`
+        board.append(circle)
     }
 
     function getRandomNumber(min, max) {
@@ -227,10 +251,10 @@ Game()
 
 function winTheGame(){
     function kill(){
-        const circle5 = document.querySelector('.circle5')
+        const circle = document.querySelector('.circle')
 
-        if(circle5){
-            circle5.click()
+        if(circle){
+            circle.click()
         }
     }
     setInterval(kill, 42)
