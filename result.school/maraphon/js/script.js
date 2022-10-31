@@ -138,7 +138,7 @@ function Board(){
     if(window.screen.width > 1000){
         SQUARES_NUMBER = 2244
     } else if( window.screen.width < 999){
-        SQUARES_NUMBER = window.screen.width + 12
+        SQUARES_NUMBER = window.screen.width + 14
     }
 
     for(let i = 0; i<SQUARES_NUMBER; i++){
@@ -177,6 +177,7 @@ function Game(){
     const timeList = document.querySelector('#time-list')
     const timeEl = document.querySelector('#time')
     const board = document.querySelector('#board-game')
+    let timer = null
     let time = 0
     let score = 0
 
@@ -202,7 +203,8 @@ function Game(){
     })
 
     function startGame() {
-        setInterval(decreaseTime, 1000)
+        score = 0
+        timer = setInterval(decreaseTime, 1000)
         createRandomCircle()
         setTime(time)
     }
@@ -224,8 +226,10 @@ function Game(){
     }
 
     function finishGame(){
-        timeEl.parentNode.classList.add('hide')
-        board.innerHTML = `<h3>Счет: <span class='primary'>${score}</span><h3/>`
+        clearInterval(timer)
+        board.querySelectorAll('div.circle').forEach(e => e.remove())
+        screens[1].classList.remove('up')
+        screens[1].querySelector('h3').innerHTML = `<h3>Счет: <span class='primary'>${score}</span><h3/>`
     }
 
     function createRandomCircle(){
