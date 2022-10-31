@@ -85,10 +85,10 @@ function getRandomColor(){
 
 function winTheGame(){
     function kill(){
-        const circle5 = document.querySelector('.circle5')
+        const circle = document.querySelector('.circle')
 
-        if(circle5){
-            circle5.click()
+        if(circle){
+            circle.click()
         }
     }
     setInterval(kill, 42)
