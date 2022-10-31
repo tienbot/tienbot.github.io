@@ -234,7 +234,12 @@ function Game(){
 
     function createRandomCircle(){
         const circle = document.createElement('div')
-        const size = getRandomNumber(10, 60)
+        let size = null
+        if(window.screen.width > 576){
+            size = getRandomNumber(10, 60)
+        } else if( window.screen.width < 577){
+            size = getRandomNumber(30, 90)
+        }
         const {width, height} = board.getBoundingClientRect()
         const x = getRandomNumber(0, width - size)
         const y = getRandomNumber(0, height - size)
