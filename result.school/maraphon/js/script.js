@@ -138,7 +138,7 @@ function Board(){
     if(window.screen.width > 1000){
         SQUARES_NUMBER = 2244
     } else if( window.screen.width < 999){
-        SQUARES_NUMBER = window.screen.width + 14
+        SQUARES_NUMBER = window.screen.width + 12
     }
 
     for(let i = 0; i<SQUARES_NUMBER; i++){
