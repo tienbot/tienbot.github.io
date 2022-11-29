@@ -1,5 +1,5 @@
 function init(){
-    let age = 30; //устанавливаем возраст
+    let age = 30; //указываем возраст героя капсулы
     document.getElementById("age").innerHTML = age;
     let clicks = 0;
     let finalBtn = document.querySelector('#final');
@@ -665,9 +665,8 @@ function init(){
     function onClick(){ document.getElementById('text').innerHTML = text(); 
         clicks += 1;
         document.getElementById("clicks").innerHTML = clicks;
-        clicks >= age ? this.disabled = true : '';
-    
         if(clicks >= age) {
+            // this.disabled = true;
             finalBtn.classList.remove('d-none');
             randomBtn.classList.add('d-none');
         }

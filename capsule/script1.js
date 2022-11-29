@@ -14,16 +14,20 @@ function init(){
         'Технология, которая взорвала тебе мозг'
     ];
     let numb = 1;
+    //отображаем первый вопрос из массива
     firstQuestion.innerHTML = questionStart[0];
 
+    //при клике на кнопку отображаем следующий вопрос из массива
     nextBtn.addEventListener('click', ()=> {
-            firstQuestion.innerHTML = questionStart[numb++];
-            if (numb>questionStart.length-1){
-                nextBtn.classList.add('d-none');
-                document.querySelector('.button').classList.remove('d-none');
-            } else if (numb>questionStart.length){
-                firstQuestion.classList.add('d-none');
-            }
+        firstQuestion.innerHTML = questionStart[numb++];
+
+        //если счетчик больше кол-ва вопросов, то...
+        if (numb>=questionStart.length){
+            //скрываем кнопку "следующие вопрос"
+            nextBtn.classList.add('d-none');
+            //отображаем кнопку "рандомные вопросы"
+            document.querySelector('.button').classList.remove('d-none');
+        }
     });
 }
 
