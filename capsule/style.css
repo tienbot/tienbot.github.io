@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30vh;
+    height: 100vh;
 }
 
 #text, p{
@@ -13,7 +13,7 @@
     font-family: PT Sans, sans-serif;
 }
 
-button{
+.button, button{
     display: block;
     justify-content: center;
     margin: auto;
@@ -28,6 +28,26 @@ button{
     width: 203px;
     height: 41px;
     border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: PT Sans, sans-serif;
+    color: #0FA8AE;
+    text-align: center;
+}
+
+.d-none{
+    display: none;
+}
+
+.red{
+    background-color: red;
 }
 
 button, 

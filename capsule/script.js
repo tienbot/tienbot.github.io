@@ -1,8 +1,11 @@
 function init(){
-    var age = 30; //устанавливаем возраст
+    let age = 30; //устанавливаем возраст
     document.getElementById("age").innerHTML = age;
-    var clicks = 0;
-    var question = [
+    let clicks = 0;
+    let finalBtn = document.querySelector('#final');
+    let randomBtn = document.querySelector('#generate');
+
+    let question = [
         "Как, где и с кем ты отметил(-а) последний Новый год?",
         "Какой длины у тебя сейчас волосы?",
         "В какую неловкую ситуацию ты недавно попал(-а)?",
@@ -652,9 +655,9 @@ function init(){
         "Расскажи о своих родителях"
     ];
 
-    var text = function makeQuestion() {
+    let text = function makeQuestion() {
         question.sort(()=>Math.random()-0.5); //перемешиваем массив
-        var randomQuestion = question.pop(); //- последний элемент массива
+        let randomQuestion = question.pop(); //- последний элемент массива
         return randomQuestion; //возвращаем этот элемент из функции
     };
 
@@ -663,20 +666,12 @@ function init(){
         clicks += 1;
         document.getElementById("clicks").innerHTML = clicks;
         clicks >= age ? this.disabled = true : '';
+    
+        if(clicks >= age) {
+            finalBtn.classList.remove('d-none');
+            randomBtn.classList.add('d-none');
+        }
     };
 }
 
-    window.onload = init;
-
-    // Как тебя зовут?
-    // Какое сейчас число?
-    // Сколько тебе лет?
-    // Где ты?
-    // Кем ты работаешь?
-    // У тебя есть парень/девушка/муж/жена?
-    // Первая вещь, которую ты сделала, когда проснулась сегодня?
-    // Самые громкие новости этого года
-    // Технология, которая взорвала тебе мозг
-
-    // Чего бы ты хотела добиться в течении года?
-    // Что такое счастье?
+window.onload = init;
