@@ -1,5 +1,10 @@
 function init(){
-    let age = 30; //указываем возраст героя капсулы
+    let age = parseInt(prompt('Сколько вам лет?')); //указываем возраст героя капсулы
+    //проверка на введение числа
+    while (isNaN(parseFloat(age)) && !isFinite(age)) {
+        age = prompt('Ошибка! Введите возраст числом');
+    }
+
     document.getElementById("age").innerHTML = age;
     let clicks = 0;
     let finalBtn = document.querySelector('#final');
