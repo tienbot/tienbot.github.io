@@ -1,0 +1,65 @@
+.checkbox 
+    display: inline-block
+    position: relative
+    cursor: pointer
+    padding: 10px
+    border-top: 1px solid #1e2d3d
+    border-bottom: 1px solid #1e2d3d
+    width:100%
+    height: 44px
+    &:first-item
+        border-top: unset
+.check 
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    height: 0
+    width: 0
+.checkmark 
+    display: inline-block
+    height: 6px
+    width: 8.5px
+    background-image: url('./ToogleImg/Triangle.svg')
+    transform: rotate(-90deg)
+    background-size: cover
+    transition: background-image 0.3s
+
+.check:checked ~ .checkmark 
+    background-image: url('./ToogleImg/Triangle.svg')
+    transform: rotate(360deg)
+.dropdown 
+    opacity: 0
+    transform: translateY(-10px)
+    transition: opacity 0.3s ease, transform 0.3s ease
+    display: none
+    padding: 20px 0
+.dropdown.show 
+    opacity: 1
+    transform: translateY(0)
+    display: block
+
+@media ( max-width: 576px )
+    .containerStyle
+        margin-bottom: 3px
+        width: calc(100vw - 32px)
+    .containerStyle:last-child
+        margin-bottom: 38px
+    .checkbox
+        border-bottom: none
+        width: 100%
+        background: #1E2D3D
+        padding-left: 24px
+
+
+
+
+
+
+
+
+
+
+
+
+

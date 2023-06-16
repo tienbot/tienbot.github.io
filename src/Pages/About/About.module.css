@@ -1,0 +1,161 @@
+.main {
+  display: flex;
+  grid-template-columns: 68px 243px auto 40%;
+  width: 100%;
+  height: 100%;
+}
+.sidebar {
+  width: 100%;
+  max-width: 67px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  gap:38px;
+  height: 100%;
+  border-right: 1px solid #1e2d3d;
+
+}
+.menu__wrapper {
+  width: 100%;
+  max-width: 243px;
+  height: 100%;
+  border-right: 1px solid #1e2d3d;
+}
+.left__content_wrapper {
+  width: 100%;
+  /* width: 674px; */
+  height: 100%;
+  /* max-height: 130vh; */
+  /* padding-bottom: 30px; */
+  border-right: 1px solid #1e2d3d;
+  /* overflow: scroll; */
+}
+
+.mobileTitle {
+    display: none;
+    color:#fff;
+    padding: 21px 27px 29px 27px;
+}
+
+.text {
+  color: white;
+  counter-reset: line;
+  white-space: pre-wrap;
+}
+.text::before {
+  counter-increment: line;
+  content: counter(line) "         *   ";
+}
+.content__title {
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid #1e2d3d;
+}
+.title__box {
+  /* min-width: 150px; */
+  height: 100%;
+  border-right: 1px solid #1e2d3d;
+}
+.right__content_wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 771px;
+}
+.labelText{
+  font-family: Fira Code;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #607B96;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+.labelText.active {
+  color: white;
+}
+.spanText{
+  font-family: Fira Code;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding-left: 11px;
+  margin-right: 9px;
+}
+.imgBio{
+  padding:  0px 9px;
+}
+.imgInfo {
+  padding:  0px 9px;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+}
+.active {
+  color: white;
+}
+.imgOne{
+  margin-top:20px;
+  height: 18px;
+  width: 20px;
+  color: #607B96;
+}
+/* .imgOne.active {
+  background: #1E2D3D;
+} */
+.imgTwo {
+  height: 16px;
+  width: 20px;
+  color: #607B96;
+}
+.imgThree {
+  height: 22px;
+  width: 16px;
+  color: #607B96;
+}
+.imgOne.active,
+.imgTwo.active,
+.imgThree.active {
+color: white;
+}
+
+.right__content_wrapper::-ms-scrollbar-thumb:hover {
+  filter: brightness(150%);
+}
+
+@media ( max-width: 576px ){
+    .sidebar{
+        display: none;
+    }
+    .main{
+        flex-direction: column;
+        overflow: auto;
+    }
+    .wrapper{
+        display: block;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content__title {
+        height: 0;
+    }
+    .menu__wrapper{
+        border-right: none;
+        width: 100%;
+    }
+    .mobileTitle {
+        display: block;
+    }
+    .left__content_wrapper{
+        border-right: none;
+        height: max-content;
+    }
+}

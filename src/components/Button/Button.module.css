@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
+
+.button{
+    padding: 10px 14px;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    background: #1C2B3A;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.button:hover{
+    cursor:pointer;
+    background: #263B50;
+}
+
+.button__primary{
+    background: #FEA55F;
+    color: #01080E;
+}
+
+.button__primary:hover{
+    background: #FFAC6B;
+    color: #01080E;
+}
+
+.button__ghost{
+    background-color:transparent;
+    outline: 1px solid rgba(255, 255, 255, 1);
+}
+
+.button__ghost:hover{
+    background-color:transparent;
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.button__startGame{
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+	transform: translateX(-50%);
+}
+
+.button__playAgain{
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+	transform: translateX(-50%);
+    outline: none;
+    background-color:transparent;
+    width: max-content;
+}
+
+.button__playAgain:hover{
+    background: transparent;
+    color:#43D9AD;
+}

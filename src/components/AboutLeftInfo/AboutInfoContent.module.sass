@@ -1,0 +1,31 @@
+.content
+    padding: 18px 40px 52px 40px
+    color: #607B96
+    overflow: auto
+    max-height: 73.5vh
+    &::-webkit-scrollbar 
+        width: 18.5px
+    &::-webkit-scrollbar-thumb
+        background-color: #607b96
+        // border-radius: 4px
+    &::-webkit-scrollbar-track
+        background-color: #f1f1f1
+        background: #011627
+        border: 1px solid #1e2d3d
+        border-top: none
+        border-bottom: none
+    img
+        width: 100%
+    ul 
+        li
+            margin-left: 10px
+            a
+                color: #607B96
+                text-decoration: underline
+
+@media ( max-width: 576px )
+    .content
+        padding: 60px 27px 50px 27px
+        max-height: unset
+        overflow: unset
+    

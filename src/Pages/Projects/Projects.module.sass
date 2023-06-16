@@ -1,0 +1,80 @@
+// $buttonXVisible: true
+.labelText
+    font-size: 16px
+    font-weight: 400
+    line-height: 21px
+    color: #FFFFFF
+    margin-left: 11px
+.main
+    max-width: 1782px
+    height: 100%
+    padding: 0
+    display: flex
+    overflow: hidden
+.wrapper
+    width: 100%
+    max-width: 311px
+    height: 100%
+    border-right: 1px solid #1e2d3d
+.wrapperCards
+    width: 100%
+    
+.content
+    width: 100%
+.border
+    border-top: 1px solid #1E2D3D
+    border-bottom: 1px solid #1E2D3D
+.card_div
+    padding: 115px 125px 170px 125px
+    height: 100%
+    width: 100%
+    overflow: auto
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 40px
+.card_div::-webkit-scrollbar 
+    width: 18.5px /* Set the width of the scrollbar */
+.card_div::-webkit-scrollbar-track 
+    background-color: #011627 /* Set the background color of the scrollbar track */
+    border: 1px solid #1E2D3D
+    border-top: none
+    border-bottom: none
+
+.card_div::-webkit-scrollbar-thumb 
+    background-color:#607B96 
+    // border-radius: 4px
+    height:7px
+    
+.mobileTitle
+    display: none
+    color:#fff
+    padding: 21px 27px 29px 27px
+
+@media (max-width:960px)
+    .card_div
+        justify-content: center
+        padding: 100px 60px 100px 95px
+@media (max-width:720px)
+    .card_div
+        padding: 80px 40px 100px 66px      
+@media (max-width:600px)
+    .card_div
+        padding: 60px 15px 80px 15px 
+@media (max-width:576px)
+    .main
+        flex-direction: column 
+        overflow: auto
+    .wrapper
+        border-right: none
+        width: 100%
+    .border
+        border-top: none
+        border-bottom: none 
+    .card_div
+        padding-top: 0
+    .mobileTitle
+        display: block
+    .border
+        display: none
+
+

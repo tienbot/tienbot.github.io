@@ -1,0 +1,141 @@
+.header {
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  outline: 1px solid #1E2D3D;
+  z-index: 100;
+  
+  .wrapName {
+    max-width:19.4rem;
+    width:100%;
+    border-right: 1px solid #1E2D3D;
+    padding:17.6px 0;
+    padding-left:22px;
+  }
+  .wrapContact {
+    border-left: 1px solid #1E2D3D;
+    padding:17.6px 23px;
+  }
+}
+
+.nav {
+  display:flex;
+  justify-content: space-between;
+  width: 1300px;
+}
+
+.ul {
+  display:flex;
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
+.li {
+  text-decoration:none;
+  border-right: 1px solid #1E2D3D;
+  &:hover{
+    color: #FFFFFF;
+    border-bottom: 3px solid #FEA55F;
+    margin-bottom:-3px;
+  }
+  &:last-of-type {
+    border-left: 1px solid #1E2D3D;
+  }
+  a {
+    display:inline-block;
+    padding:17.6px 30px;
+    text-decoration:none;
+    white-space: nowrap;
+  }
+}
+
+a[class='HeaderText_HeaderText__LzOpA active']{
+    color: #FFFFFF;
+    border-bottom: 3px solid #FEA55F;
+    margin-bottom:-3px;
+}
+
+.burger_btn{
+  display: none;
+  margin-right: 20px;
+  margin-top: 15px;
+  color: #607B96;
+  transition: ease 0.1s;
+  &:hover{
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+.ulMobile {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    width: calc(100% - 32px);
+    height: calc(100% - 141px);
+    background: #011627;
+    li {
+        border-bottom: solid 1px #1E2D3D;
+        &:first-child{
+            border-top: solid 1px #1E2D3D;
+        }
+        &:last-of-type {
+            border-left: none;
+        }
+    }
+    a {
+        width: 100%;
+        color:#fff;
+    }
+    a[class="HeaderText_HeaderText__LzOpA active"]{
+        color:#fff;
+        border-bottom: 3px solid #FEA55F;
+    }
+}
+
+@media (max-width: 960px) {
+  .burger_btn{
+    display: block;
+    
+  }
+  .nav{
+    display: none;
+  }
+  .navActive{
+    display: flex;
+    flex-direction: column;
+  }
+  .navActive .ulMobile{
+    display: flex;
+  }
+  .header
+    .wrapName{
+      border: none;
+    }
+  .ulMobile {
+    width: calc(100% - 62px);
+    height: calc(100% - 171px);
+  }
+  .li {
+    border-right: none;
+  }
+
+}
+
+
+@media screen and (max-width: 540px) {
+    a[class='HeaderText_HeaderText__LzOpA active']{
+        color: #607B96;
+        border-bottom: unset;
+        margin-bottom: unset;
+    }
+
+    // add Zhazgul21
+    .burger_btn{
+      top: 35px;
+    }
+}

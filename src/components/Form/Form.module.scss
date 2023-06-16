@@ -1,0 +1,166 @@
+.wrapper{
+    width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 372px;
+  height: 372px;
+}
+
+.form button {
+    width: 146px;
+    align-items: flex-start;
+}
+
+.formWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.input {
+  background: #011221;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: none;
+  color: #465E77;
+  font-size: 1rem;
+  line-height: 21px;
+  border: 1px solid #1E2D3D;
+  min-height: 41px;
+  margin-bottom: 24px;
+  width: 100%;
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid #607B96;
+    box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.3);
+    outline: none;
+  }
+}
+
+.noResize {
+  resize: none;
+}
+
+.button_button {
+  width: 146px;
+  height: 38px;
+  padding: 10px 14px;
+  background-color: #1C2B3A;
+  color: #FFFFFF;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+
+  &:hover {
+    outline: none;
+    border: none;
+    background-color: #FEA55F;
+  }
+}
+
+.border{
+    border-top: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D
+}
+
+.leftContent{
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #1E2D3D;
+    width: 50%;
+    padding: 0 27px;
+    padding-top: 10vh;
+}
+
+.rightContent{
+    display: flex;
+    align-items: center;
+    padding: 0 27px;
+    padding-top: 10vh;
+    flex-direction: column;
+    width: 50%;
+
+}
+.rightContent p {
+    color: #607B96;
+}
+
+.row{
+    display: flex;
+}
+
+.number{
+    width: 22px;
+    color: #607B96;
+    text-align: end;
+    margin-right: 40px;
+}
+
+.pink{
+    color: #C98BDF;
+}
+
+.blue{
+    color: #5565E8;
+}
+
+.orange{
+    color: #FEA55F;
+}
+
+.thanks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 372px;
+    height: 372px;
+    
+}
+
+.thanksTitle{
+    color:#fff;
+    font-weight: 450;
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+
+.thanksP{
+    color: #607B96;
+    text-align: center;
+}
+
+.thanks button{
+    margin-top: 37px;
+}
+
+@media ( max-width: 576px ){
+    .formWrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 38px;
+    }
+    .leftContent{
+        justify-content: center;
+        border-right: unset;
+        width: unset;
+        padding-top: unset;
+        padding: 0 27px;
+        padding-bottom: 38px;
+    }
+    .rightContent{
+        display: none;
+    }
+    .border{
+        display: none;
+    }
+}
