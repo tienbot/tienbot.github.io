@@ -126,16 +126,14 @@ a[class='HeaderText_HeaderText__LzOpA active']{
 
 }
 
-
 @media screen and (max-width: 540px) {
     a[class='HeaderText_HeaderText__LzOpA active']{
         color: #607B96;
         border-bottom: unset;
         margin-bottom: unset;
     }
-
-    // add Zhazgul21
-    .burger_btn{
-      top: 35px;
+    .ulMobile {
+        width: calc(100% - 32px);
+        height: calc(100% - 141px);
     }
 }

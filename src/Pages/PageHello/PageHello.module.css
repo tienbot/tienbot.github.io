@@ -306,6 +306,7 @@
     .pageHello__h1{
         line-height: 100%;
         margin-bottom: 5px;
+        font-size: 56px;
     }
 
     .pageHello__textSubtext{
