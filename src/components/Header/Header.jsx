@@ -74,7 +74,7 @@ export const Header = () => {
     <Router>
       <header className={s.header}>
         <div className={s.wrapName}>
-          <TextComponent text="Aleksandr-Plugun" />
+          <TextComponent text="Aleksandr-Plygun" />
         </div>
         <div onClick={toggleNav} className={s.burger_btn}>
           {nav ? <AiOutlineClose size={22} /> : <AiOutlineMenu size={22} />}

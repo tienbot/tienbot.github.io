@@ -21,6 +21,7 @@ export const Card = ({ name, imageUrl, link, hasPage, linkPage, isVisible, index
       'beautifulWorld': ['css', 'js'],
       'food': ['html', 'css', 'js'],
       'architect': ['css'],
+      'freelance': ['html', 'css'],
       'fairyForest': ['css', 'js'],
       'capsule': ['js'],
       'childhood': ['html', 'css'],
