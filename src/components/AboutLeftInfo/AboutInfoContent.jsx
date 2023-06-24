@@ -191,6 +191,9 @@ const AboutInfoContent = ({ activeToggle }) => {
       leftContent = <div className={s.content}>
         <ul>
             <p>2023</p>
+            <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/6034/">The Secret Life of Walter Mitty (2013)</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/1044280/">Guardians of the Galaxy Vol. 3 (2023)</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/902939/">Baby Driver (2017)</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/105948/">Scott Pilgrim vs. the World (2010)</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/420070/">Ку! Кин-дза-дза (2012)</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/1170315/">Hors normes (2019)</a></li>

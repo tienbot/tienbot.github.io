@@ -59,6 +59,7 @@
 /* вмето .gist-file */
 .content section [translate]{
     border: 1px solid #1E2D3D;
+    max-width: 482px;
 }
 
 /* вмето .gist-data */
