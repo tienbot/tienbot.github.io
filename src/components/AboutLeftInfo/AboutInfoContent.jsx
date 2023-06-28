@@ -191,6 +191,7 @@ const AboutInfoContent = ({ activeToggle }) => {
       leftContent = <div className={s.content}>
         <ul>
             <p>2023</p>
+            <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/93377/">Hot Fuzz (2007)</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/6034/">The Secret Life of Walter Mitty (2013)</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/1044280/">Guardians of the Galaxy Vol. 3 (2023)</a></li>
             <li><a target="_blank" rel="noreferrer" href="https://www.kinopoisk.ru/film/902939/">Baby Driver (2017)</a></li>

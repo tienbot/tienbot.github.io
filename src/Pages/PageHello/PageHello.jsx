@@ -123,9 +123,9 @@ export const PageHello = () => {
                 <img className={s.bolt__DownLeft} src={boltDownLeft} alt="" />
                 <img className={s.bolt__DownRight} src={boltDownRight} alt="" />
             </div>
+            <div className={s.blurGreen}></div>
+            <div className={s.blurBlue}></div>
         </div>
-        <div className={s.blurGreen}></div>
-        <div className={s.blurBlue}></div>
     </main>
     );
 };
