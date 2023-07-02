@@ -272,7 +272,8 @@ function SnakeGame(){
         {!gameStarted && <Button textBtn='start game' primary startGame/>}
         {gameWin && <>
             <div className={s.game__message}>WELL DONE!
-            <p><a href="https://tienbot.github.io/gamePage/" target="_blank" rel="noreferrer">Secret is Mine!</a></p>
+            <p><a href="https://tienbot1.github.io/" target="_blank" rel="noreferrer">Secret is Mine!</a></p>
+            {/* <p><a href="https://tienbot.github.io/gamePage/" target="_blank" rel="noreferrer">Secret is Mine!</a></p> */}
             </div>
             <Button textBtn='play-again' playAgain/>
         </>}
